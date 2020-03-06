@@ -29,7 +29,7 @@ ENV NAGIOS_HOME=/opt/nagios \
 RUN addgroup -S ${NAGIOS_GROUP} && \
     adduser  -S ${NAGIOS_USER} -G ${NAGIOS_CMDGROUP} && \
     apk update && \
-    apk add --no-cache git curl unzip apache2 apache2-utils rsyslog net-snmp \
+    apk add --no-cache git curl unzip apache2 apache2-utils rsyslog net-snmp net-snmp-tools \
                         php7 php7-gd php7-cli runit parallel ssmtp \
                         libltdl libintl openssl-dev php7-apache2 procps && \
     wget https://github.com/tianon/gosu/releases/download/1.11/gosu-amd64 && \
